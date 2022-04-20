@@ -22,6 +22,8 @@ class VueRouter {
   bindEvents() {
     window.addEventListener('load',this.onHashChange.bind(this),false);
     window.addEventListener('hashchange',this.onHashChange.bind(this),false);
+    // window.addEventListener('popstate',this.onHashChange.bind(this),false);
+    // pushState和replaceState不会向服务器发起请求
   }
 
   // 获取hash地址
